@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 flex: 2,
               ),
               SvgPicture.asset(
-                'assets/ic_instagram.svg',
+                'assets/ic_alumnews.svg',
                 color: primaryColor,
                 height: 64,
               ),

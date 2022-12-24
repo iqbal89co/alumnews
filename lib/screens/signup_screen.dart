@@ -23,7 +23,6 @@ class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _bioController = TextEditingController();
   bool _isLoading = false;
   Uint8List? _image;
 
@@ -46,7 +45,6 @@ class _SignupScreenState extends State<SignupScreen> {
         email: _emailController.text,
         password: _passwordController.text,
         username: _usernameController.text,
-        bio: _bioController.text,
         file: _image!);
     // if string returned is sucess, user has been created
     if (res == "success") {
@@ -95,7 +93,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 flex: 2,
               ),
               SvgPicture.asset(
-                'assets/ic_instagram.svg',
+                'assets/ic_alumnews.svg',
                 color: primaryColor,
                 height: 64,
               ),
@@ -153,11 +151,6 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               const SizedBox(
                 height: 24,
-              ),
-              TextFieldInput(
-                hintText: 'Enter your bio',
-                textInputType: TextInputType.text,
-                textEditingController: _bioController,
               ),
               const SizedBox(
                 height: 24,
