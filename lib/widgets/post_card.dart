@@ -1,3 +1,4 @@
+import 'package:alumnews/screens/profile_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:alumnews/models/user.dart' as model;
@@ -86,10 +87,19 @@ class _PostCardState extends State<PostCard> {
             ).copyWith(right: 0),
             child: Row(
               children: <Widget>[
-                CircleAvatar(
-                  radius: 16,
-                  backgroundImage: NetworkImage(
-                    widget.snap['profImage'].toString(),
+                InkWell(
+                  child: CircleAvatar(
+                    radius: 16,
+                    backgroundImage: NetworkImage(
+                      widget.snap['profImage'].toString(),
+                    ),
+                  ),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ProfileScreen(
+                        uid: widget.snap['uid'],
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(

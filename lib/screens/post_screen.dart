@@ -6,8 +6,8 @@ import 'package:alumnews/utils/global_variable.dart';
 import 'package:alumnews/widgets/post_card.dart';
 
 class PostScreen extends StatefulWidget {
-  final String id;
-  const PostScreen({Key? key, required this.id}) : super(key: key);
+  final String uid;
+  const PostScreen({Key? key, required this.uid}) : super(key: key);
 
   @override
   State<PostScreen> createState() => _PostScreenState();
@@ -44,7 +44,7 @@ class _PostScreenState extends State<PostScreen> {
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('posts')
-            .doc(widget.id)
+            .doc(widget.uid)
             .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

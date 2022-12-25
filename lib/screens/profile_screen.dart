@@ -1,3 +1,4 @@
+import 'package:alumnews/screens/post_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -228,11 +229,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         DocumentSnapshot snap =
                             (snapshot.data! as dynamic).docs[index];
 
-                        return Container(
+                        return InkWell(
                           child: Image(
                             image: NetworkImage(snap['postUrl']),
                             fit: BoxFit.cover,
                           ),
+                          onTap: () {
+                            var route = MaterialPageRoute(
+                              builder: (BuildContext context) => PostScreen(
+                                  uid: (snapshot.data! as dynamic).docs[index]
+                                      ['postId']),
+                            );
+                            Navigator.of(context).push(route);
+                          },
                         );
                       },
                     );

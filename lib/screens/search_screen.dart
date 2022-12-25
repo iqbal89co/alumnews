@@ -101,7 +101,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     onTap: () {
                       var route = MaterialPageRoute(
                         builder: (BuildContext context) => PostScreen(
-                            id: (snapshot.data! as dynamic).docs[index]
+                            uid: (snapshot.data! as dynamic).docs[index]
                                 ['postId']),
                       );
                       Navigator.of(context).push(route);
