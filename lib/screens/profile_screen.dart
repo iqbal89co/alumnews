@@ -1,3 +1,4 @@
+import 'package:alumnews/screens/edit_profile_screen.dart';
 import 'package:alumnews/screens/post_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -79,6 +80,53 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 userData['username'],
               ),
               centerTitle: false,
+              actions: [
+                FirebaseAuth.instance.currentUser!.uid == widget.uid
+                    ? IconButton(
+                        icon: const Icon(
+                          Icons.more_vert,
+                          color: primaryColor,
+                        ),
+                        onPressed: () {
+                          showDialog(
+                            useRootNavigator: false,
+                            context: context,
+                            builder: (context) {
+                              return Dialog(
+                                child: ListView(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 16),
+                                    shrinkWrap: true,
+                                    children: [
+                                      'Edit Profile',
+                                    ]
+                                        .map(
+                                          (e) => InkWell(
+                                              child: Container(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        vertical: 12,
+                                                        horizontal: 16),
+                                                child: Text(e),
+                                              ),
+                                              onTap: () {
+                                                var route = MaterialPageRoute(
+                                                  builder: (BuildContext
+                                                          context) =>
+                                                      const EditProfileScreen(),
+                                                );
+                                                Navigator.of(context)
+                                                    .push(route);
+                                              }),
+                                        )
+                                        .toList()),
+                              );
+                            },
+                          );
+                        },
+                      )
+                    : const Text(''),
+              ],
             ),
             body: ListView(
               children: [

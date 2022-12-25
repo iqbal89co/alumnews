@@ -88,11 +88,15 @@ class _PostCardState extends State<PostCard> {
             child: Row(
               children: <Widget>[
                 InkWell(
-                  child: CircleAvatar(
-                    radius: 16,
-                    backgroundImage: NetworkImage(
-                      widget.snap['profImage'].toString(),
-                    ),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 16,
+                        backgroundImage: NetworkImage(
+                          widget.snap['profImage'].toString(),
+                        ),
+                      ),
+                    ],
                   ),
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(
