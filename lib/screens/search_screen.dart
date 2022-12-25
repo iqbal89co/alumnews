@@ -1,3 +1,4 @@
+import 'package:alumnews/screens/post_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -92,9 +93,19 @@ class _SearchScreenState extends State<SearchScreen> {
                 return StaggeredGridView.countBuilder(
                   crossAxisCount: 3,
                   itemCount: (snapshot.data! as dynamic).docs.length,
-                  itemBuilder: (context, index) => Image.network(
-                    (snapshot.data! as dynamic).docs[index]['postUrl'],
-                    fit: BoxFit.cover,
+                  itemBuilder: (context, index) => InkWell(
+                    child: Image.network(
+                      (snapshot.data! as dynamic).docs[index]['postUrl'],
+                      fit: BoxFit.cover,
+                    ),
+                    onTap: () {
+                      var route = MaterialPageRoute(
+                        builder: (BuildContext context) => PostScreen(
+                            id: (snapshot.data! as dynamic).docs[index]
+                                ['postId']),
+                      );
+                      Navigator.of(context).push(route);
+                    },
                   ),
                   staggeredTileBuilder: (index) => MediaQuery.of(context)
                               .size
