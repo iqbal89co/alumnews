@@ -31,15 +31,15 @@ class _FeedScreenState extends State<FeedScreen> {
                 color: primaryColor,
                 height: 32,
               ),
-              actions: [
-                IconButton(
-                  icon: const Icon(
-                    Icons.messenger_outline,
-                    color: primaryColor,
-                  ),
-                  onPressed: () {},
-                ),
-              ],
+              // actions: [
+              //   IconButton(
+              //     icon: const Icon(
+              //       Icons.messenger_outline,
+              //       color: primaryColor,
+              //     ),
+              //     onPressed: () {},
+              //   ),
+              // ],
             ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection('posts').snapshots(),
