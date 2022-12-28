@@ -29,7 +29,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   late final List? _workExperiences;
   @override
   Widget build(BuildContext context) {
-    var options = ["Option 1", "Option 2", "Option 3"];
+    var country = ["Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+    var city = [ "Banda Aceh", "Langsa", "Lhokseumawe", "Sabang", "Subulussalam", "Binjai", "Gunungsitoli", "Medan", "Padangsidempuan", "Pematangsiantar", "Sibolga", "Tanjungbalai", "Tebing Tinggi", "Bengkulu", "Jambi", "Sungaipenuh", "Dumai", "Pekanbaru", "Bukittinggi", "Padang", "Padang Panjang", "Pariaman", "Payakumbuh", "Sawahlunto", "Solok", "Lubuklinggau", "Pagar Alam", "Palembang", "Prabumulih", "Bandar Lampung", "Metro", "Pangkalpinang", "Batam", "Tanjungpinang", "Jawa", "Bandung", "Banjar", "Batu", "Bekasi", "Blitar", "Bogor", "Cilegon", "Cimahi", "Cirebon", "Depok", "Jakarta", "Jakarta Utara", "Jakarta Timur", "Jakarta Pusat", "Jakarta Selatan", "Jakarta Barat", "Kediri", "Madiun", "Magelang", "Malang", "Mojokerto", "Pasuruan", "Pekalongan", "Probolinggo", "Salatiga", "Semarang", "Serang", "Sukabumi", "Surabaya", "Surakarta", "Tasikmalaya", "Tangerang", "Tangerang Selatan", "Tegal", "Yogyakarta", "Kalimantan", "Pontianak", "Singkawang", "Banjarbaru", "Banjarmasin", "Palangka Raya", "Balikpapan", "Bontang", "Samarinda", "Tarakan", "Nusantara", "Nusa Tenggara", "Denpasar", "Bima", "Mataram", "Kupang", "Sulawesi", "Gorontalo", "Makassar", "Palopo", "Parepare", "Baubau", "Kendari", "Palu", "Bitung", "Kotamobagu", "Manado", "Tomohon", "Maluku", "Ambon", "Tual", "Ternate", "Tidore Kepulauan", "Papua", "Jayapura", "Sorong"];
     final model.User user = Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
@@ -86,7 +87,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     showSelectedItems: true,
                     disabledItemFn: (String s) => s.startsWith('I'),
                   ),
-                  items: options,
+                  items: country,
                   dropdownDecoratorProps: const DropDownDecoratorProps(
                     dropdownSearchDecoration: InputDecoration(
                       labelText: "Negara",
@@ -101,7 +102,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     showSelectedItems: true,
                     disabledItemFn: (String s) => s.startsWith('I'),
                   ),
-                  items: options,
+                  items: city,
                   dropdownDecoratorProps: const DropDownDecoratorProps(
                     dropdownSearchDecoration: InputDecoration(
                       labelText: "Kota",
