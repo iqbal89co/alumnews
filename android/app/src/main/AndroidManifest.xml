@@ -3,7 +3,7 @@
    <application
         android:label="alumnews"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_alumnews">
+        android:icon="@mipmap/alumnews_payung">
         <activity
             android:name=".MainActivity"
             android:exported="true"

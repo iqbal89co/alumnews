@@ -27,8 +27,7 @@ class _PostScreenState extends State<PostScreen> {
               backgroundColor: mobileBackgroundColor,
               centerTitle: false,
               title: SvgPicture.asset(
-                'assets/ic_alumnews.svg',
-                color: primaryColor,
+                'assets/alumnews_payung.svg',
                 height: 32,
               ),
               actions: [

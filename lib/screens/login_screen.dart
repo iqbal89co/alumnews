@@ -75,8 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 flex: 2,
               ),
               SvgPicture.asset(
-                'assets/ic_alumnews.svg',
-                color: primaryColor,
+                'assets/alumnews_payung.svg',
                 height: 64,
               ),
               const SizedBox(

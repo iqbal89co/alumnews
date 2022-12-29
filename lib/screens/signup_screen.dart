@@ -93,8 +93,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 flex: 2,
               ),
               SvgPicture.asset(
-                'assets/ic_alumnews.svg',
-                color: primaryColor,
+                'assets/alumnews_payung.svg',
                 height: 64,
               ),
               const SizedBox(

@@ -13,16 +13,16 @@ class User {
   final String? website;
   final List? educationExperiences;
   final List? workExperiences;
-  final List followers;
-  final List following;
+  final List? followers;
+  final List? following;
 
   const User({
     required this.username,
     required this.uid,
     required this.photoUrl,
     required this.email,
-    required this.followers,
-    required this.following,
+    this.followers,
+    this.following,
     this.name,
     this.bio,
     this.locationCountry,
