@@ -42,7 +42,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
     // showSnackBar(context, _username);
     // signup user using our authmethodds
-    showSnackBar(context, 'res');
     String res = await AuthMethods().editProfileUser(
       username: _username,
       email: _email,

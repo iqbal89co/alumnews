@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "423887801762",
-    "project_id": "alumnews-31924",
-    "storage_bucket": "alumnews-31924.appspot.com"
+    "project_number": "736724605351",
+    "project_id": "alumnews-89aae",
+    "storage_bucket": "alumnews-89aae.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:423887801762:android:0fa3b90a587ae7dd28f6fb",
+        "mobilesdk_app_id": "1:736724605351:android:fc30a1b4fe0326d4c3be82",
         "android_client_info": {
           "package_name": "com.example.alumnews"
         }
       },
       "oauth_client": [
         {
-          "client_id": "423887801762-86oinfq5iuk95i6ibagp64eind8iuqsb.apps.googleusercontent.com",
+          "client_id": "736724605351-ug2dd8r5uvv4u1bsph3plvqn0uhe39vp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBAELSfY1SxqKwwkuQddH21ae5tpKYBixg"
+          "current_key": "AIzaSyCNTPbIC3WIM_oQVuRFnZvtS2DgOQfoU8c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "423887801762-86oinfq5iuk95i6ibagp64eind8iuqsb.apps.googleusercontent.com",
+              "client_id": "736724605351-ug2dd8r5uvv4u1bsph3plvqn0uhe39vp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

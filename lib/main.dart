@@ -19,11 +19,11 @@ void main() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
-        apiKey: 'AIzaSyCqpKIVfyy7cUpxVYShAQQmTvgeHaIWmrM',
-        appId: '1:423887801762:web:35760fbb7197ec5328f6fb',
-        messagingSenderId: '423887801762',
-        projectId: 'alumnews-31924',
-        storageBucket: "alumnews-31924.appspot.com",
+        apiKey: 'AIzaSyC3xspiw3Hbae74oCja_FvvslSeZQGKX5U',
+        appId: '1:736724605351:web:a3244ebf194e5c64c3be82',
+        messagingSenderId: '736724605351',
+        projectId: 'alumnews-89aae',
+        storageBucket: "alumnews-89aae.appspot.com",
       ),
     );
   } else {
