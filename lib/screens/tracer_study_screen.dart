@@ -1,3 +1,4 @@
+import 'package:alumnews/screens/tracer_study_form_screen.dart';
 import 'package:alumnews/utils/colors.dart';
 import 'package:alumnews/utils/global_variable.dart';
 import 'package:flutter/material.dart';
@@ -30,14 +31,28 @@ class _TracerStudyScreenState extends State<TracerStudyScreen> {
               ),
         body: ListView(
           padding: const EdgeInsets.all(8),
-          children: const <Widget>[
+          children: <Widget>[
             ListTile(
-              title: Text('Tracer Study 2021'),
+              title: const Text('Tracer Study 2021'),
               tileColor: greenColor,
+              onTap: () {
+                var route = MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const TracerStudyFormScreen(),
+                );
+                Navigator.of(context).push(route);
+              },
             ),
             ListTile(
-              title: Text('Tracer Study 2022'),
+              title: const Text('Tracer Study 2022'),
               tileColor: greenColor,
+              onTap: () {
+                var route = MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const TracerStudyFormScreen(),
+                );
+                Navigator.of(context).push(route);
+              },
             ),
           ],
         ));
