@@ -30,15 +30,15 @@ class _PostScreenState extends State<PostScreen> {
                 'assets/alumnews_payung.svg',
                 height: 32,
               ),
-              actions: [
-                IconButton(
-                  icon: const Icon(
-                    Icons.messenger_outline,
-                    color: primaryColor,
-                  ),
-                  onPressed: () {},
-                ),
-              ],
+              // actions: [
+              //   IconButton(
+              //     icon: const Icon(
+              //       Icons.messenger_outline,
+              //       color: primaryColor,
+              //     ),
+              //     onPressed: () {},
+              //   ),
+              // ],
             ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
