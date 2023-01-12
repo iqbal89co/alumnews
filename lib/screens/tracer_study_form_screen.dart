@@ -23,7 +23,7 @@ class _TracerStudyFormScreenState extends State<TracerStudyFormScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: mobileBackgroundColor,
-        title: const Text('Tracer Studi'),
+        title: const Text('Tracer Study'),
       ),
       body: Container(
         padding: const EdgeInsets.only(left: 16, right: 8),
