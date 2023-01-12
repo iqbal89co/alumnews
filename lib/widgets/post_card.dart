@@ -119,6 +119,7 @@ class _PostCardState extends State<PostCard> {
                           widget.snap['username'].toString(),
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: primaryColor,
                           ),
                         ),
                       ],
@@ -127,6 +128,7 @@ class _PostCardState extends State<PostCard> {
                 ),
                 widget.snap['uid'].toString() == user.uid
                     ? IconButton(
+                        color: secondaryColor,
                         onPressed: () {
                           showDialog(
                             useRootNavigator: false,
@@ -199,7 +201,7 @@ class _PostCardState extends State<PostCard> {
                     isAnimating: isLikeAnimating,
                     child: const Icon(
                       Icons.favorite,
-                      color: Colors.white,
+                      color: secondaryColor,
                       size: 100,
                     ),
                     duration: const Duration(
@@ -229,6 +231,7 @@ class _PostCardState extends State<PostCard> {
                         )
                       : const Icon(
                           Icons.favorite_border,
+                          color: secondaryColor,
                         ),
                   onPressed: () => FireStoreMethods().likePost(
                     widget.snap['postId'].toString(),
@@ -240,6 +243,7 @@ class _PostCardState extends State<PostCard> {
               IconButton(
                 icon: const Icon(
                   Icons.comment_outlined,
+                  color: secondaryColor,
                 ),
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
